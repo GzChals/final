@@ -26,7 +26,7 @@ public class ServicioDTO {
     private LocalTime horaCierre;
 
     @NotNull
-    private Integer duracionSesion;
+    private LocalTime duracionSesion;
 
     public Long getId() {
         return id;
@@ -68,11 +68,11 @@ public class ServicioDTO {
         this.horaCierre = horaCierre;
     }
 
-    public Integer getDuracionSesion() {
+    public LocalTime getDuracionSesion() {
         return duracionSesion;
     }
 
-    public void setDuracionSesion(final Integer duracionSesion) {
+    public void setDuracionSesion(final LocalTime duracionSesion) {
         this.duracionSesion = duracionSesion;
     }
 

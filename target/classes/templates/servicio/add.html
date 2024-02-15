@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+    <head>
+        <title>[[#{servicio.add.headline}]]</title>
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <div class="d-flex flex-wrap mb-4">
+                <h1 class="flex-grow-1">[[#{servicio.add.headline}]]</h1>
+                <div>
+                    <a th:href="@{/servicios}" class="btn btn-secondary">[[#{servicio.add.back}]]</a>
+                </div>
+            </div>
+            <div th:replace="~{fragments/forms::globalErrors('servicio')}" />
+            <form th:action="${requestUri}" method="post">
+                <div th:replace="~{fragments/forms::inputRow(object='servicio', field='nombre', required=true)}" />
+                <div th:replace="~{fragments/forms::inputRow(object='servicio', field='capacidad', required=true, type='number')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='servicio', field='horaApertura', required=true, inputClass='js-timepicker')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='servicio', field='horaCierre', required=true, inputClass='js-timepicker')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='servicio', field='duracionSesion', required=true, inputClass='js-timepicker')}" />
+                <input type="submit" th:value="#{servicio.add.headline}" class="btn btn-primary mt-4" />
+            </form>
+        </div>
+    </body>
+</html>

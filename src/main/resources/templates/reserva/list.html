@@ -18,8 +18,6 @@
                     <thead>
                         <tr>
                             <th scope="col">[[#{reserva.id.label}]]</th>
-                            <th scope="col">[[#{reserva.idUsuario.label}]]</th>
-                            <th scope="col">[[#{reserva.idServicio.label}]]</th>
                             <th scope="col">[[#{reserva.diaReserva.label}]]</th>
                             <th scope="col">[[#{reserva.horaReserva.label}]]</th>
                             <th scope="col">[[#{reserva.estadoReserva.label}]]</th>
@@ -31,8 +29,6 @@
                     <tbody>
                         <tr th:each="reserva : ${reservas}">
                             <td>[[${reserva.id}]]</td>
-                            <td>[[${reserva.idUsuario}]]</td>
-                            <td>[[${reserva.idServicio}]]</td>
                             <td>[[${reserva.diaReserva}]]</td>
                             <td>[[${reserva.horaReserva}]]</td>
                             <td>[[${reserva.estadoReserva}]]</td>

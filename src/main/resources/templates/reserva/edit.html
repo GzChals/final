@@ -14,8 +14,6 @@
             </div>
             <div th:replace="~{fragments/forms::globalErrors('reserva')}" />
             <form th:action="${requestUri}" method="post">
-                <div th:replace="~{fragments/forms::inputRow(object='reserva', field='id', disabled=true, type='number')}" />
-                <div th:replace="~{fragments/forms::inputRow(object='reserva', field='idUsuario', required=true, type='number')}" />
                 <div th:replace="~{fragments/forms::inputRow(object='reserva', field='idServicio', required=true, type='number')}" />
                 <div th:replace="~{fragments/forms::inputRow(object='reserva', field='diaReserva', required=true, inputClass='js-datepicker')}" />
                 <div th:replace="~{fragments/forms::inputRow(object='reserva', field='horaReserva', required=true, inputClass='js-timepicker')}" />

@@ -49,7 +49,7 @@ public class Servicio {
     private LocalTime horaCierre;
 
     @Column(nullable = false)
-    private Integer duracionSesion;
+    private LocalTime duracionSesion;
 
     @OneToMany(mappedBy = "servicio")
     private Set<Reserva> reservas;
@@ -102,11 +102,11 @@ public class Servicio {
         this.horaCierre = horaCierre;
     }
 
-    public Integer getDuracionSesion() {
+    public LocalTime getDuracionSesion() {
         return duracionSesion;
     }
 
-    public void setDuracionSesion(final Integer duracionSesion) {
+    public void setDuracionSesion(final LocalTime duracionSesion) {
         this.duracionSesion = duracionSesion;
     }
 

@@ -32,3 +32,17 @@ error:
       5xx: ERROR
 springdoc:
   pathsToMatch: /api/**
+security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: tu-client-id
+            client-secret: tu-client-secret
+            redirect-uri: "{baseUrl}/login/oauth2/code/github"
+            authorization-grant-type: authorization_code
+            scope: read:user
+h2:
+    console:
+      enabled: true
+      path: /h2-console

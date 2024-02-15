@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+    <head>
+        <title>[[#{servicio.list.headline}]]</title>
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <div class="d-flex flex-wrap mb-4">
+                <h1 class="flex-grow-1">[[#{servicio.list.headline}]]</h1>
+                <div>
+                    <a th:href="@{/servicios/add}" class="btn btn-primary ms-2">[[#{servicio.list.createNew}]]</a>
+                </div>
+            </div>
+            <div th:if="${servicios.empty}">[[#{servicio.list.empty}]]</div>
+            <div th:if="${!servicios.empty}" class="table-responsive">
+                <table class="table table-striped table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th scope="col">[[#{servicio.id.label}]]</th>
+                            <th scope="col">[[#{servicio.nombre.label}]]</th>
+                            <th scope="col">[[#{servicio.capacidad.label}]]</th>
+                            <th scope="col">[[#{servicio.horaApertura.label}]]</th>
+                            <th scope="col">[[#{servicio.horaCierre.label}]]</th>
+                            <th scope="col">[[#{servicio.duracionSesion.label}]]</th>
+                            <th><!-- --></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="servicio : ${servicios}">
+                            <td>[[${servicio.id}]]</td>
+                            <td>[[${servicio.nombre}]]</td>
+                            <td>[[${servicio.capacidad}]]</td>
+                            <td>[[${servicio.horaApertura}]]</td>
+                            <td>[[${servicio.horaCierre}]]</td>
+                            <td>[[${servicio.duracionSesion}]]</td>
+                            <td>
+                                <div class="float-end text-nowrap">
+                                    <a th:href="@{/servicios/edit/{id}(id=${servicio.id})}" class="btn btn-sm btn-secondary">[[#{servicio.list.edit}]]</a>
+                                    <form th:action="@{/servicios/delete/{id}(id=${servicio.id})}"
+                                            th:data-confirm-message="#{delete.confirm}" method="post" class="js-submit-confirm d-inline">
+                                        <button type="submit" class="btn btn-sm btn-secondary">[[#{servicio.list.delete}]]</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

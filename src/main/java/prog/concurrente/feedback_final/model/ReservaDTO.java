@@ -10,11 +10,11 @@ public class ReservaDTO {
 
     private Long id;
 
-    @NotNull
-    private Long idUsuario;
+    //@NotNull
+    //private Long idUsuario;
 
-    @NotNull
-    private Long idServicio;
+    //@NotNull
+    //private Long idServicio;
 
     @NotNull
     private LocalDate diaReserva;
@@ -38,21 +38,21 @@ public class ReservaDTO {
         this.id = id;
     }
 
-    public Long getIdUsuario() {
-        return idUsuario;
-    }
+    //public Long getIdUsuario() {
+    //    return idUsuario;
+    //}
 
-    public void setIdUsuario(final Long idUsuario) {
-        this.idUsuario = idUsuario;
-    }
+    //public void setIdUsuario(final Long idUsuario) {
+    //    this.idUsuario = idUsuario;
+    //}
 
-    public Long getIdServicio() {
-        return idServicio;
-    }
+    //public Long getIdServicio() {
+    //    return idServicio;
+    //}
 
-    public void setIdServicio(final Long idServicio) {
-        this.idServicio = idServicio;
-    }
+    //public void setIdServicio(final Long idServicio) {
+    //    this.idServicio = idServicio;
+    //}
 
     public LocalDate getDiaReserva() {
         return diaReserva;

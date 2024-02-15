@@ -41,11 +41,11 @@ public class Reserva {
     )
     private Long id;
 
-    @Column(nullable = false)
-    private Long idUsuario;
+    //@Column(nullable = false)
+    //private Long idUsuario;
 
-    @Column(nullable = false)
-    private Long idServicio;
+    //@Column(nullable = false)
+    //private Long idServicio;
 
     @Column(nullable = false)
     private LocalDate diaReserva;
@@ -81,21 +81,21 @@ public class Reserva {
         this.id = id;
     }
 
-    public Long getIdUsuario() {
-        return idUsuario;
-    }
+    //public Long getIdUsuario() {
+   //     return idUsuario;
+   // }
 
-    public void setIdUsuario(final Long idUsuario) {
-        this.idUsuario = idUsuario;
-    }
+    //public void setIdUsuario(final Long idUsuario) {
+   //     this.idUsuario = idUsuario;
+    //}
 
-    public Long getIdServicio() {
-        return idServicio;
-    }
+    //public Long getIdServicio() {
+    //    return idServicio;
+    //}
 
-    public void setIdServicio(final Long idServicio) {
-        this.idServicio = idServicio;
-    }
+    //public void setIdServicio(final Long idServicio) {
+    //    this.idServicio = idServicio;
+    //}
 
     public LocalDate getDiaReserva() {
         return diaReserva;

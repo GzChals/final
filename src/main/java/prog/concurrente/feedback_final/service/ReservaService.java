@@ -60,8 +60,8 @@ public class ReservaService {
 
     private ReservaDTO mapToDTO(final Reserva reserva, final ReservaDTO reservaDTO) {
         reservaDTO.setId(reserva.getId());
-        reservaDTO.setIdUsuario(reserva.getIdUsuario());
-        reservaDTO.setIdServicio(reserva.getIdServicio());
+        //reservaDTO.setIdUsuario(reserva.getIdUsuario());
+        //reservaDTO.setIdServicio(reserva.getIdServicio());
         reservaDTO.setDiaReserva(reserva.getDiaReserva());
         reservaDTO.setHoraReserva(reserva.getHoraReserva());
         reservaDTO.setEstadoReserva(reserva.getEstadoReserva());
@@ -71,8 +71,8 @@ public class ReservaService {
     }
 
     private Reserva mapToEntity(final ReservaDTO reservaDTO, final Reserva reserva) {
-        reserva.setIdUsuario(reservaDTO.getIdUsuario());
-        reserva.setIdServicio(reservaDTO.getIdServicio());
+        //reserva.setIdUsuario(reservaDTO.getIdUsuario());
+        //reserva.setIdServicio(reservaDTO.getIdServicio());
         reserva.setDiaReserva(reservaDTO.getDiaReserva());
         reserva.setHoraReserva(reservaDTO.getHoraReserva());
         reserva.setEstadoReserva(reservaDTO.getEstadoReserva());

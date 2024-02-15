@@ -18,7 +18,7 @@
                 <div th:replace="~{fragments/forms::inputRow(object='servicio', field='capacidad', required=true, type='number')}" />
                 <div th:replace="~{fragments/forms::inputRow(object='servicio', field='horaApertura', required=true, inputClass='js-timepicker')}" />
                 <div th:replace="~{fragments/forms::inputRow(object='servicio', field='horaCierre', required=true, inputClass='js-timepicker')}" />
-                <div th:replace="~{fragments/forms::inputRow(object='servicio', field='duracionSesion', required=true, type='number')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='servicio', field='duracionSesion', required=true, inputClass='js-timepicker')}" />
                 <input type="submit" th:value="#{servicio.add.headline}" class="btn btn-primary mt-4" />
             </form>
         </div>
